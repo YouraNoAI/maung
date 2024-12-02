@@ -239,7 +239,7 @@
       <div class="footer-icons">
         <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a>
         <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-tiktok-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
   </footer>
