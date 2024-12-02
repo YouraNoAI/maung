@@ -153,48 +153,47 @@ $postingan = query("SELECT * FROM berita ORDER BY idBerita LIMIT $awalBerita, $j
 
     <!--footer-->
     <br>
-    <footer class="footer-distributed" style="width: 100%;">
-      <div class="footer-left">
-        
-        <div class="logo">
-          <img src="img/logo/kementrian.png" alt="" style="width: 125px;">
-          <img src="img/logo/icon.png" alt="" style="width: 225px;">
-        </div>
-        <br>
-        <p class="footer-company-about">
-          <span>Kementerian Lingkungan Hidup dan Kehutanan <br>
-                Direktorat Jenderal Pengelolaan Sampah, Limbah dan B3 <br>
-                Direktorat Pengelolaan Sampah
-          </span>
-        </p>
-        <!-- <h3>BANK SAMPAH MLIRIPROWO</h3> -->
+  <footer class="footer-distributed" style="width: 100%;">
+    <div class="footer-left">
+
+      <div class="logo">
+        <img src="img/logo/kementrian.png" alt="" style="width: 125px;">
+        <img src="img/logo/icon.png" alt="" style="width: 225px;">
       </div>
-      <div class="footer-center">
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>Sleman</span> Daerah Istimewa Yogyakarta.</p>
-        </div>
-        <div>
-          <i class="fa fa-phone"></i>
-          <p><a href="sms:(+62)85749469501">(+62)81222333444</a></p>
-        </div>
-        <div>
-          <i class="fa fa-envelope"></i>
-          <p><a href="mailto:bank_mliriprowo@gmail.com">banksampah@gmail.com</a></p>
-        </div>
+      <br>
+      <p class="footer-company-about">
+        <span>Kementerian Lingkungan Hidup dan Kehutanan <br>
+          Direktorat Jenderal Pengelolaan Sampah, Limbah dan B3 <br>
+          Direktorat Pengelolaan Sampah
+        </span>
+      </p>
+    </div>
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Gempolsari</span> Kabupaten Subang.</p>
       </div>
-      <div class="footer-right">
-        <p class="footer-company-about">
-          <span>Kunjungi Sosial Media Kami!</span>
-          Untuk yang ingin lebih dekat dengan Bank Sampah, silahkan kunjungi sosial media kami dibawah ini!
-        </p>
-        <div class="footer-icons">
-          <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p><a href="sms:(+62)85749469501">(+62)81222333444</a></p>
       </div>
-    </footer>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:bank_mliriprowo@gmail.com">gemsarapp@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Kunjungi Sosial Media Kami!</span>
+        Untuk yang ingin lebih dekat dengan Bank Sampah, silahkan kunjungi sosial media kami dibawah ini!
+      </p>
+      <div class="footer-icons">
+        <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-tiktok-square"></i></a>
+      </div>
+    </div>
+  </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

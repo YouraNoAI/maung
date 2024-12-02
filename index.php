@@ -161,7 +161,7 @@
                     <img src="img/content/3.png">
                   </div>
                   <div class="details">
-                    <h3>Tahap 3<br><span>Penimbangan Sampah</span></h3>
+                    <h3>Tahap 3<br><span>Melaporkan Sampah</span></h3>
                   </div>
                 </div>
                 <div class="coloumn">
@@ -228,7 +228,7 @@
       </div>
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="mailto:bank_mliriprowo@gmail.com">banksampah@gmail.com</a></p>
+        <p><a href="mailto:bank_mliriprowo@gmail.com">gemsarapp@gmail.com</a></p>
       </div>
     </div>
     <div class="footer-right">

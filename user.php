@@ -58,23 +58,25 @@ error_reporting(0);
           <img src="img/user/<?= $biodata["gambar"]  ?>" alt="">
           <p><?php echo $biodata["namaUser"]; ?></p>
         </center>
-        <li class="item" id="dashboard">
-          <a href="dashboarduser.php" class="menu-btn"> <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+        <li class="item">
+          <a href="user.php" target="isi" class="menu-btn">
+            <i class="fa fa-user"></i><span>Data User</span>
           </a>
-          <div class="sub-menu">
-            <a href="user.php" target="isi" class="menu-btn">
-              <i class="fa fa-user"></i><span>Data User</span>
-            </a>
-            <a href="hasilUser.php" target="isi" class="menu-btn">
-              <i class="fas fa-comments-dollar"></i><span>Hasil Pengumpulan</span>
-            </a>
-            <a href="setoranUser.php" target="isi" class="menu-btn">
-              <i class="fas fa-comments-dollar"></i><span>Transaksi Penarikan</span>
-            </a>
-            <a href="pengumpulanUser.php" target="isi" class="menu-btn">
-              <i class="fas fa-chart-bar"></i><span>Grafik Pengumpulan</span>
-            </a>
-          </div>
+        </li>
+        <li class="item">
+          <a href="hasilUser.php" target="isi" class="menu-btn">
+            <i class="fas fa-comments-dollar"></i><span>Hasil Pengumpulan</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="setoranUser.php" target="isi" class="menu-btn">
+            <i class="fas fa-comments-dollar"></i><span>Transaksi Penarikan</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="pengumpulanUser.php" target="isi" class="menu-btn">
+            <i class="fas fa-chart-bar"></i><span>Grafik Pengumpulan</span>
+          </a>
         </li>
         <li class="item">
           <a href="logout.php" target="isi" class="menu-btn">
@@ -87,14 +89,13 @@ error_reporting(0);
   </div>
 
   <div class="box-1">
-    <h2 style="font-size: 30px; color: #262626;" class="text-center">Selamat Datang, <?php echo $biodata["namaUser"]; ?>!</h2>
+    <h2 style="font-size: 30px; color: #262626;" class="text-center">Data Nasabah</h2>
     <div class="card">
       <div class="card-body">
-        <h4 class="text-center">Informasi Akun Anda</h4>
-        <hr>
+
         <section>
           <div class="form-group">
-            <label class="">Nomor Induk Nasabah:</label>
+            <label class="text-left">Nomor Induk Nasabah:</label>
             <input type="text" style="cursor: not-allowed; width: 100%;" disabled="disabled" value="<?php echo $biodata["idUser"]; ?>" />
           </div>
           <div class="form-group">
@@ -129,19 +130,6 @@ error_reporting(0);
             <button type="submit" name="submit" class="btn btn-primary btn-lg" style="width: 100%;">Edit Data</button>
           </a>
         </section>
-      </div>
-    </div>
-  </div>
-
-  <div class="box-2">
-    <h4 class="text-center">Aktivitas Terakhir</h4>
-    <div class="card">
-      <div class="card-body">
-        <ul>
-          <li>Setoran terakhir: Rp <?php echo $biodata["jmlSetoran"]; ?> pada <?php echo date("d-m-Y"); ?></li>
-          <li>Saldo terakhir: Rp <?php echo $biodata["saldo"]; ?></li>
-          <!-- Tambahkan lebih banyak aktivitas sesuai kebutuhan -->
-        </ul>
       </div>
     </div>
   </div>
