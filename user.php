@@ -58,9 +58,58 @@ error_reporting(0);
           <img src="img/user/<?= $biodata["gambar"]  ?>" alt="">
           <p><?php echo $biodata["namaUser"]; ?></p>
         </center>
+
+
+
         <li class="item">
           <a href="user.php" target="isi" class="menu-btn">
-            <i class="fa fa-user"></i><span>Data User</span>
+            <i class="fas fa-desktop"></i><span>Dashboard</span>
+          </a>
+        </li>
+        <li class="item" id="kategori">
+          <a href="#kategori" class="menu-btn">
+            <i class="glyphicon glyphicon-book"></i><span>Data<i class="fas fa-chevron-down drop-down"></i></span>
+          </a>
+          <div class="sub-menu">
+            <a href="user.php" target="isi"><i class=""></i><span>Data Warga</span></a>
+          </div>
+        </li>
+        <li class="item" id="post">
+          <a href="#post" class="menu-btn">
+            <i class="fas fa-chart-bar"></i><span>Hasil Pengumpulan<i class="fas fa-chevron-down drop-down"></i></span>
+          </a>
+          <div class="sub-menu">
+            <a href="hasilUser.php" target="isi"><i class=""></i><span>Riwayat Pelaporan</span></a>
+          </div>
+        </li>
+        <li class="item" id="insentif">
+          <a href="#insentif" class="menu-btn">
+            <i class="fas fa-money-bill-wave"></i><span>Insentif<i class="fas fa-chevron-down drop-down"></i></span>
+          </a>
+          <div class="sub-menu">
+            <a href="setoranUser.php" target="isi"><i class=""></i><span>Riwayat Insentif</span></a>
+          </div>
+        </li>
+        <li class="item" id="validasi">
+          <a href="#validasi" class="menu-btn">
+            <i class="fas fa-check-circle"></i><span>Validasi<i class="fas fa-chevron-down drop-down"></i></span>
+          </a>
+          <div class="sub-menu">
+            <a href="pengumpulanUser.php" target="isi"><i class=""></i><span>Laporan Anda</span></a>
+          </div>
+        </li>
+        <li class="item">
+          <a href="logout.php" target="isi" class="menu-btn">
+            <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+          </a>
+        </li>
+
+
+
+
+        <!-- <li class="item">
+          <a href="user.php" target="isi" class="menu-btn">
+            <i class="fa fa-user"></i><span>Data Warga</span>
           </a>
         </li>
         <li class="item">
@@ -82,24 +131,24 @@ error_reporting(0);
           <a href="logout.php" target="isi" class="menu-btn">
             <i class="fas fa-sign-out-alt"></i><span>Logout</span>
           </a>
-        </li>
+        </li> -->
       </div>
     </div>
     <!--sidebar end-->
   </div>
 
   <div class="box-1">
-    <h2 style="font-size: 30px; color: #262626;" class="text-center">Data Nasabah</h2>
+    <h2 style="font-size: 30px; color: #262626;" class="text-center">Data Warga</h2>
     <div class="card">
       <div class="card-body">
 
         <section>
           <div class="form-group">
-            <label class="text-left">Nomor Induk Nasabah:</label>
+            <label class="text-left">Nomor Induk Warga:</label>
             <input type="text" style="cursor: not-allowed; width: 100%;" disabled="disabled" value="<?php echo $biodata["idUser"]; ?>" />
           </div>
           <div class="form-group">
-            <label class="">Nama Nasabah:</label>
+            <label class="">Nama Warga:</label>
             <input type="text" style="cursor: not-allowed; width: 100%;" disabled="disabled" value="<?php echo $biodata["namaUser"]; ?>" />
           </div>
           <div class="form-group">

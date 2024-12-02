@@ -1,9 +1,9 @@
-<?php 
+<?php
 session_start();
 require 'functions.php';
 
-if ( !isset($_SESSION["login"]) ){
-	echo "<script>
+if (!isset($_SESSION["login"])) {
+    echo "<script>
 			alert('Anda Harus Login Terlebih Dahulu!');
       document.location.href ='login.php';
 		</script>";
@@ -18,7 +18,8 @@ $penarikan = query("SELECT * FROM penarikan WHERE idUser = '$id' ORDER BY tglTar
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Transaksi Penarikan Saldo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -35,97 +36,116 @@ $penarikan = query("SELECT * FROM penarikan WHERE idUser = '$id' ORDER BY tglTar
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
-    $(document).ready(function() {
-      $(".preloader").fadeOut();
-    })
+        $(document).ready(function() {
+            $(".preloader").fadeOut();
+        })
     </script>
 
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!--Pre Loader-->
     <div class="preloader">
         <div class="loading">
-        <img src="img/aset/loading.gif" width="80">
+            <img src="img/aset/loading.gif" width="80">
         </div>
     </div>
 
     <!--wrapper start-->
-        <div class="wrapper">
-            <!--sidebar start-->
-            <div class="sidebar">
-                <div class="sidebar-menu">
-                    <center class="profile">
-                        <img src="img/user/<?= $biodata["gambar"]  ?>" alt="">
-                        <p><?php echo $biodata["namaUser"]; ?></p>
-                    </center>
-                    <li class="item">
-                        <a href="user.php" target="isi" class="menu-btn">
-                            <i class="fa fa-user"></i><span>Data User</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="hasilUser.php" target="isi" class="menu-btn">
-                            <i class="fas fa-comments-dollar"></i><span>Hasil Pengumpulan</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="setoranUser.php" target="isi" class="menu-btn">
-                            <i class="fas fa-comments-dollar"></i><span>Transaksi Penarikan</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="pengumpulanUser.php" target="isi" class="menu-btn">
-                            <i class="fas fa-chart-bar"></i><span>Grafik Pengumpulan</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="logout.php" target="isi" class="menu-btn">
-                            <i class="fas fa-sign-out-alt"></i><span>Logout</span>
-                        </a>
-                    </li>
-                </div>
+    <div class="wrapper">
+        <!--sidebar start-->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <center class="profile">
+                    <img src="img/user/<?= $biodata["gambar"]  ?>" alt="">
+                    <p><?php echo $biodata["namaUser"]; ?></p>
+                </center>
+                <li class="item">
+                    <a href="user.php" target="isi" class="menu-btn">
+                        <i class="fas fa-desktop"></i><span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="item" id="kategori">
+                    <a href="#kategori" class="menu-btn">
+                        <i class="glyphicon glyphicon-book"></i><span>Data<i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="user.php" target="isi"><i class=""></i><span>Data Warga</span></a>
+                    </div>
+                </li>
+                <li class="item" id="post">
+                    <a href="#post" class="menu-btn">
+                        <i class="fas fa-chart-bar"></i><span>Hasil Pengumpulan<i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="hasilUser.php" target="isi"><i class=""></i><span>Riwayat Pelaporan</span></a>
+                    </div>
+                </li>
+                <li class="item" id="insentif">
+                    <a href="#insentif" class="menu-btn">
+                        <i class="fas fa-money-bill-wave"></i><span>Insentif<i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="setoranUser.php" target="isi"><i class=""></i><span>Riwayat Insentif</span></a>
+                    </div>
+                </li>
+                <li class="item" id="validasi">
+                    <a href="#validasi" class="menu-btn">
+                        <i class="fas fa-check-circle"></i><span>Validasi<i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="pengumpulanUser.php" target="isi"><i class=""></i><span>Laporan Anda</span></a>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="logout.php" target="isi" class="menu-btn">
+                        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+                    </a>
+                </li>
+
             </div>
-            <!--sidebar end-->
         </div>
+        <!--sidebar end-->
+    </div>
 
     <div class="box-1 text-center">
-      <h2 style="font-size: 30px; color: #262626;">Data Penarikan Saldo Anda</h2>
-      <div class="card">
-        <div class="card-body">
-      
-        <table id="example" class="display" cellspacing="0" width="100%" border="0" >
-          <thead>
-          <tr>
-              <th>No</th>
-              <th>Tanggal Penarikan</th>
-              <th>Jumlah Penarikan</th>
-          </tr>
-          </thead>
-          <tbody>
-          <?php $i = 1; ?>
-          <?php foreach ( $penarikan as $row)  : ?>
-          <tr align="center">
-              <td><?php echo $i; ?></td>
-              <td><?php echo $row['tglTarik'] ?></td>
-              <td><?php echo "Rp. ".number_format(($row['jmlPenarikan']), 2, ",", ".") ?></td>
-          </tr>
-          <?php $i++; ?>
-          <?php endforeach; ?>
-          </tbody>
-        </table>
-        <br>
-        <br>
-        <script type="text/javascript" src="css/datatables/js/jquery.min.js"></script>
-        <script type="text/javascript" src="css/datatables/js/jquery.dataTables.min.js"></script>
-        <script>
-            $(document).ready(function() {
-              $('#example').DataTable();
-            } );
-        </script>
+        <h2 style="font-size: 30px; color: #262626;">Data Penarikan Saldo Anda</h2>
+        <div class="card">
+            <div class="card-body">
+
+                <table id="example" class="display" cellspacing="0" width="100%" border="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal Penarikan</th>
+                            <th>Jumlah Penarikan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $i = 1; ?>
+                        <?php foreach ($penarikan as $row) : ?>
+                            <tr align="center">
+                                <td><?php echo $i; ?></td>
+                                <td><?php echo $row['tglTarik'] ?></td>
+                                <td><?php echo "Rp. " . number_format(($row['jmlPenarikan']), 2, ",", ".") ?></td>
+                            </tr>
+                            <?php $i++; ?>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <script type="text/javascript" src="css/datatables/js/jquery.min.js"></script>
+                <script type="text/javascript" src="css/datatables/js/jquery.dataTables.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('#example').DataTable();
+                    });
+                </script>
+            </div>
         </div>
-      </div>
-		</div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -137,5 +157,6 @@ $penarikan = query("SELECT * FROM penarikan WHERE idUser = '$id' ORDER BY tglTar
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
