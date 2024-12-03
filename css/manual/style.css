@@ -179,7 +179,7 @@ transform: scale(1.2);
 .row .coloumn .details{
 position: absolute;
 bottom: -85px;
-left: 0
+left: 0;
 padding:10px;
 box-sizing: border-box;
 background: rgba(0,0,0,.9);
