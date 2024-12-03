@@ -32,36 +32,13 @@
   </div>
   <!--Navbar-->
   <hr class="bg-danger fw-bold fixed-top" style="height: 13px; margin: top 15px;">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.php"><img src="img/logo/icon.png" alt="" style="width:130px; height: auto; object-fit: contain;"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto fw-bold fs-5">
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="index.php"><i class="fas fa-home"></i> Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="informasiSampah.php"><i class="fas fa-info-circle"></i> Informasi Sampah</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="setoranSampah.php"><i class="fas fa-trash-restore-alt"></i> Lapor Sampah</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active text-white" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-user-circle"></i> Account
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item text-white" href="registrasi.php"><i class="fas fa-registered"></i> Registration</a></li>
-              <li><a class="dropdown-item text-white" href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-            </ul>
-          </li>
-          <!-- <a class="nav-link active text-white" aria-current="page" href="#">Beranda</a> -->
-          </li>
-        </ul>
-      </div>
+  <nav class="Navbar-Top">
+    <img src="img/logo/icon.png" alt="" style="width:130px; height: auto; object-fit: contain;">
+    <div class="Navbar-Top-Right">
+      <a href="#beranda">Beranda</a>
+      <a href="#informasiSampah">Informasi Sampah</a>
+      <a href="#setoranSampah">Lapor Sampah</a>
+      <a href="login.php" class="special"><i class="fas fa-user-circle"></i></a>
     </div>
   </nav>
   <!--Carousel-->
@@ -111,79 +88,88 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!--konten2-->
-  <div class="container-about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="title-un">GEMSAR APP</h3>
-          <div class="title-un-icon"><i class="fas fa-dumpster"></i></div>
-          <p class="title-un-des" style="text-align: justify;">Sireum Hideung adalah sebuah inisiatif lingkungan yang bertujuan untuk mengelola limbah secara lebih efektif dan berkelanjutan dengan cara mengumpulkan, memilah, dan mendaur ulang sampah dari masyarakat. Program ini tidak hanya membantu mengurangi jumlah sampah yang berakhir di tempat pembuangan akhir, tetapi juga memberikan nilai ekonomi bagi masyarakat dengan cara menukar sampah yang dapat didaur ulang dengan uang atau barang kebutuhan sehari-hari. Melalui edukasi dan partisipasi aktif, bank sampah berkontribusi dalam menciptakan lingkungan yang lebih bersih dan sehat, serta mengubah pola pikir masyarakat mengenai pentingnya pengelolaan limbah yang bertanggung jawab.</p>
+  <!--Beranda-->
+  <section id="beranda" class="p-5">
+    <div class="container-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title-un">GEMSAR APP</h3>
+            <div class="title-un-icon"><i class="fas fa-dumpster"></i></div>
+            <p>Sireum Hideung adalah sebuah inisiatif lingkungan yang bertujuan untuk mengelola limbah secara lebih efektif dan berkelanjutan dengan cara mengumpulkan, memilah, dan mendaur ulang sampah dari masyarakat. Program ini tidak hanya membantu mengurangi jumlah sampah yang berakhir di tempat pembuangan akhir, tetapi juga memberikan nilai ekonomi bagi masyarakat dengan cara menukar sampah yang dapat didaur ulang dengan uang atau barang kebutuhan sehari-hari. Melalui edukasi dan partisipasi aktif, bank sampah berkontribusi dalam menciptakan lingkungan yang lebih bersih dan sehat, serta mengubah pola pikir masyarakat mengenai pentingnya pengelolaan limbah yang bertanggung jawab.</p>
+          </div>
         </div>
       </div>
     </div>
+    <div class="container-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title-un">CARA MENGGUNAKAN GEMSAR APP</h3>
+            <div class="title-un-icon"><i class="fab fa-accusoft"></i></div>
+            <div class="title-un-des" style="text-align:justify">Tahap Penggunaan Program GEMSAR APP:
+              <ol>
+                <li>Pendaftaran : Warga yang ingin menyetorkan sampah harus mendaftar terlebih dahulu</li>
+                <li>Pemilahan : Sampah harus dipilah berdasar jenis-jenisnya</li>
+                <li>Penimbangan : Sampah ditimbang untuk mengetahui berat sampah yang akan disetorkan</li>
+                <li>Mendapat Keuntungan : Warga dapat memperoleh sejumlah uang jika sampah berhasil dijual</li>
+              </ol>
+            </div>
+            <div id="foo">
+              <section class="team">
+                <div class="row mgt50px">
+                  <div class="coloumn">
+                    <div class="imgBox">
+                      <img src="img/content/1.png">
+                    </div>
+                    <div class="details">
+                      <h3>Tahap 1<br><span>Lakukan Pendaftaran</span></h3>
+                    </div>
+                  </div>
+                  <div class="coloumn">
+                    <div class="imgBox">
+                      <img src="img/content/2.png">
+                    </div>
+                    <div class="details">
+                      <h3>Tahap 2<br><span>Pemilahan Sampah</span></h3>
+                    </div>
+                  </div>
+                  <div class="coloumn">
+                    <div class="imgBox">
+                      <img src="img/content/3.png">
+                    </div>
+                    <div class="details">
+                      <h3>Tahap 3<br><span>Melaporkan Sampah</span></h3>
+                    </div>
+                  </div>
+                  <div class="coloumn">
+                    <div class="imgBox">
+                      <img src="img/content/4.png">
+                    </div>
+                    <div class="details">
+                      <h3>Tahap 4<br><span>Mendapat Keuntungan</span></h3>
+                    </div>
+                  </div>
+                  <div style="clear: both;"></div>
+                </div>
+            </div>
+  </section>
   </div>
-  <div class="container-newsletter">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="title-un">CARA MENGGUNAKAN GEMSAR APP</h3>
-          <div class="title-un-icon"><i class="fab fa-accusoft"></i></div>
-          <div class="title-un-des" style="text-align: justify;">Tahap Penggunaan Program GEMSAR APP:
-            <ol>
-              <li>Pendaftaran : Warga yang ingin menyetorkan sampah harus mendaftar terlebih dahulu</li>
-              <li>Pemilahan : Sampah harus dipilah berdasar jenis-jenisnya</li>
-              <li>Penimbangan : Sampah ditimbang untuk mengetahui berat sampah yang akan disetorkan</li>
-              <li>Mendapat Keuntungan : Warga dapat memperoleh sejumlah uang jika sampah berhasil dijual</li>
-            </ol>
-          </div>
-          <div id="foo">
-            <section class="team">
-              <div class="row mgt50px">
-                <div class="coloumn">
-                  <div class="imgBox">
-                    <img src="img/content/1.png">
-                  </div>
-                  <div class="details">
-                    <h3>Tahap 1<br><span>Lakukan Pendaftaran</span></h3>
-                  </div>
-                </div>
-                <div class="coloumn">
-                  <div class="imgBox">
-                    <img src="img/content/2.png">
-                  </div>
-                  <div class="details">
-                    <h3>Tahap 2<br><span>Pemilahan Sampah</span></h3>
-                  </div>
-                </div>
-                <div class="coloumn">
-                  <div class="imgBox">
-                    <img src="img/content/3.png">
-                  </div>
-                  <div class="details">
-                    <h3>Tahap 3<br><span>Melaporkan Sampah</span></h3>
-                  </div>
-                </div>
-                <div class="coloumn">
-                  <div class="imgBox">
-                    <img src="img/content/4.png">
-                  </div>
-                  <div class="details">
-                    <h3>Tahap 4<br><span>Mendapat Keuntungan</span></h3>
-                  </div>
-                </div>
-                <div style="clear: both;"></div>
-              </div>
-          </div>
-          </section>
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
   </div>
   </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="asset/internal/js/index.js"></script>
-
+  </section>
+  <!-- Informasi Sampah -->
+  <section id="informasiSampah">
+    <?php require 'informasiSampah.php'; ?>
+  </section>
+  <!-- Setoran Sampah -->
+  <section id="setoranSampah">
+    <?php require 'setoranSampah.php' ?>
+  </section>
   <!--konten maps-->
   <br>
   <div class="container-about">
@@ -200,10 +186,42 @@
       </div>
     </div>
   </div>
+  <!-- bagian pagination -->
+  <div class="align-center pagination" style="margin-left: 40%;">
+    <?php if ($halamanAktif != 1) {
+      $a = $halamanAktif - 1;
+      echo "<a class='button' href='?halaman=$a'>Previous</a>";
+    } elseif ($halamanAktif = 1) {
+      echo "<a class='button' href='?halaman=1'>Previous</a>";
+    } ?>
+
+    <?php for ($i = 1; $i <= $jumlahHalaman; $i++) :
+      // var_dump($i);
+    ?>
+
+      <?php if ($halamanAktif != $i) : ?>
+        <a class="button" href="?halaman=<?= $i; ?>"><?= $i; ?></a>
+      <?php else : ?>
+        <a class="button" style="background-color: #8a8f6a; color: white;" href="?halaman=<?= $i; ?>"><?= $i; ?></a>
+      <?php endif; ?>
+    <?php endfor; ?>
+    <?php if ($halamanAktif < $jumlahHalaman) {
+      $a = $halamanAktif + 1;
+      echo "<a class='button' href='?halaman=$a'>Next</a>";
+    } elseif ($halamanAktif = $jumlahHalaman) {
+      $a = $jumlahHalaman;
+      echo "<a class='button' href='?halaman=$a'>Next</a>";
+    } ?>
+  </div>
+  <nav class="Nav-Bottom">
+    <a href="#beranda">Beranda</a>
+    <a href="#informasiSampah">Informasi Sampah</a>
+    <a href="#setoranSampah">Lapor Sampah</a>
+  </nav>
   <!--footer-->
   <br>
   <footer class="footer-distributed" style="width: 100%;">
-    <div class="footer-left">
+    <div class="footer-left footer">
 
       <div class="logo">
         <img src="img/logo/kementrian.png" alt="" style="width: 125px;">
@@ -217,7 +235,7 @@
         </span>
       </p>
     </div>
-    <div class="footer-center">
+    <div class="footer-center footer">
       <div>
         <i class="fa fa-map-marker"></i>
         <p><span>Gempolsari</span> Kabupaten Subang.</p>
@@ -231,7 +249,7 @@
         <p><a href="mailto:bank_mliriprowo@gmail.com">gemsarapp@gmail.com</a></p>
       </div>
     </div>
-    <div class="footer-right">
+    <div class="footer-right footer">
       <p class="footer-company-about">
         <span>Kunjungi Sosial Media Kami!</span>
         Untuk yang ingin lebih dekat dengan Bank Sampah, silahkan kunjungi sosial media kami dibawah ini!
@@ -246,6 +264,7 @@
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="./js/manual/index.js"></script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
