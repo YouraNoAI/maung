@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 /*---------------------------
 Preloader Area CSS Code  
@@ -48,6 +49,11 @@ Preloader Area CSS Code
     align-items: center;
     gap: 2em;
 }
+.Navbar-Top .Navbar-Top-Right input {
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
 .Navbar-Top .Navbar-Top-Right a {
     color: #eaeaea;
     text-decoration: none;
@@ -70,6 +76,9 @@ Preloader Area CSS Code
     color: #fff;
     transition: 0.5s;
 }
+
+/* Nav Bottom */
+
 .Nav-Bottom {
     display: none;
 }
@@ -83,24 +92,28 @@ Preloader Area CSS Code
     .Nav-Bottom {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
         background-color: #2a2b3d;
         padding: 1em 3em;
         position: fixed;
         bottom: 0;
         width: 100%;
+        height: 80px;
+        border-top: 2px solid salmon;
     }
-    .Nav-Bottom a {
+    .Nav-Bottom a i {
+        font-size: 2.5em;
         color: #eaeaea;
-        text-decoration: none;
-        font-weight: 500;
     }
-    .Nav-Bottom a:hover {
+    .Nav-Bottom a span{
+        display: none;
+    }
+    .Nav-Bottom a i:hover span {
+        font-size: 3.5em;
         color: #fff;
-        font-weight: 1000;
         transition: 0.5s;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        text-decoration-thickness: 2px;
+        display: block;
     }
 }
 /* ---carousel--- */
@@ -675,4 +688,21 @@ Preloader Area CSS Code
 
     margin-right: 3px;
     margin-bottom: 5px;
+}
+
+
+/* Section/beranda.php */
+
+@media screen and (max-width: 768px) {
+    .container-about, .container-newsletters {
+        padding: 0;
+        width: 100%;
+    }
+    .row .coloumn {
+        width: 100%;
+        margin: 0;
+    }
+    .usage-steps {
+        padding-left: 0;
+    }
 }

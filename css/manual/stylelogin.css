@@ -39,8 +39,8 @@ body {
 	cursor: pointer;
 	font-family: raleway;
 	-webkit-transition:all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn-login:hover{

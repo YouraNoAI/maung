@@ -1,8 +1,9 @@
+<?php require 'configs.php'; ?>
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>BANK SAMPAH | Beranda</title>
+  <title>GEMSAR APP</title>
   <link rel="icon" type="image/png" href="img/logo/favicon.png">
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -14,6 +15,8 @@
   <link rel="stylesheet" type="text/css" href="css/style-enfold.css">
   <script src="js/manual/preloader.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style-schedule.css">
+  <link rel="stylesheet" type="text/css" href="css/datatables/CSS/jquery.dataTables.css">
   <!-- Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500,600,300,700' rel='stylesheet' type='text/css'>
   <script>
@@ -22,7 +25,6 @@
     })
   </script>
 </head>
-
 <body>
   <!--Pre Loader-->
   <div class="preloader">
@@ -35,10 +37,11 @@
   <nav class="Navbar-Top">
     <img src="img/logo/icon.png" alt="" style="width:130px; height: auto; object-fit: contain;">
     <div class="Navbar-Top-Right">
+      <input class="special" type="search" placeholder="Cari...">
       <a href="#beranda">Beranda</a>
       <a href="#informasiSampah">Informasi Sampah</a>
       <a href="#setoranSampah">Lapor Sampah</a>
-      <a href="login.php" class="special"><i class="fas fa-user-circle"></i></a>
+      <a href="login.php"><i class="fas fa-user-circle"></i></a>
     </div>
   </nav>
   <!--Carousel-->
@@ -89,87 +92,11 @@
     </button>
   </div>
   <!--Beranda-->
-  <section id="beranda" class="p-5">
-    <div class="container-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="title-un">GEMSAR APP</h3>
-            <div class="title-un-icon"><i class="fas fa-dumpster"></i></div>
-            <p>Sireum Hideung adalah sebuah inisiatif lingkungan yang bertujuan untuk mengelola limbah secara lebih efektif dan berkelanjutan dengan cara mengumpulkan, memilah, dan mendaur ulang sampah dari masyarakat. Program ini tidak hanya membantu mengurangi jumlah sampah yang berakhir di tempat pembuangan akhir, tetapi juga memberikan nilai ekonomi bagi masyarakat dengan cara menukar sampah yang dapat didaur ulang dengan uang atau barang kebutuhan sehari-hari. Melalui edukasi dan partisipasi aktif, bank sampah berkontribusi dalam menciptakan lingkungan yang lebih bersih dan sehat, serta mengubah pola pikir masyarakat mengenai pentingnya pengelolaan limbah yang bertanggung jawab.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="title-un">CARA MENGGUNAKAN GEMSAR APP</h3>
-            <div class="title-un-icon"><i class="fab fa-accusoft"></i></div>
-            <div class="title-un-des" style="text-align:justify">Tahap Penggunaan Program GEMSAR APP:
-              <ol>
-                <li>Pendaftaran : Warga yang ingin menyetorkan sampah harus mendaftar terlebih dahulu</li>
-                <li>Pemilahan : Sampah harus dipilah berdasar jenis-jenisnya</li>
-                <li>Penimbangan : Sampah ditimbang untuk mengetahui berat sampah yang akan disetorkan</li>
-                <li>Mendapat Keuntungan : Warga dapat memperoleh sejumlah uang jika sampah berhasil dijual</li>
-              </ol>
-            </div>
-            <div id="foo">
-              <section class="team">
-                <div class="row mgt50px">
-                  <div class="coloumn">
-                    <div class="imgBox">
-                      <img src="img/content/1.png">
-                    </div>
-                    <div class="details">
-                      <h3>Tahap 1<br><span>Lakukan Pendaftaran</span></h3>
-                    </div>
-                  </div>
-                  <div class="coloumn">
-                    <div class="imgBox">
-                      <img src="img/content/2.png">
-                    </div>
-                    <div class="details">
-                      <h3>Tahap 2<br><span>Pemilahan Sampah</span></h3>
-                    </div>
-                  </div>
-                  <div class="coloumn">
-                    <div class="imgBox">
-                      <img src="img/content/3.png">
-                    </div>
-                    <div class="details">
-                      <h3>Tahap 3<br><span>Melaporkan Sampah</span></h3>
-                    </div>
-                  </div>
-                  <div class="coloumn">
-                    <div class="imgBox">
-                      <img src="img/content/4.png">
-                    </div>
-                    <div class="details">
-                      <h3>Tahap 4<br><span>Mendapat Keuntungan</span></h3>
-                    </div>
-                  </div>
-                  <div style="clear: both;"></div>
-                </div>
-            </div>
-  </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="asset/internal/js/index.js"></script>
-  </section>
+  <?php require 'Sections/beranda.php'; ?>
   <!-- Informasi Sampah -->
-  <section id="informasiSampah">
-    <?php require 'informasiSampah.php'; ?>
-  </section>
+  <?php require 'Sections/informasiSampah.php'; ?>
   <!-- Setoran Sampah -->
-  <section id="setoranSampah">
-    <?php require 'setoranSampah.php' ?>
-  </section>
+  <?php require 'Sections/setoranSampah.php'; ?>
   <!--konten maps-->
   <br>
   <div class="container-about">
@@ -213,10 +140,12 @@
       echo "<a class='button' href='?halaman=$a'>Next</a>";
     } ?>
   </div>
+  <!-- Nav-Bottom -->
   <nav class="Nav-Bottom">
-    <a href="#beranda">Beranda</a>
-    <a href="#informasiSampah">Informasi Sampah</a>
-    <a href="#setoranSampah">Lapor Sampah</a>
+    <a href="#beranda"><i id="icon-Nav-bottom" class="fas fa-home"></i><span>Beranda</span></a>
+    <a href="#informasiSampah"><i id="icon-bottom" class="fas fa-info-circle"></i><span>Informasi Sampah</span></a>
+    <a href="#setoranSampah"><i id="icon-bottom" class="fas fa-dumpster"></i><span>Lapor Sampah</span></a>
+    <a href="login.php" class="special"><i id="icon-bottom" class="fas fa-user-circle"></i><span>Login</span></a>
   </nav>
   <!--footer-->
   <br>
@@ -265,6 +194,9 @@
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="./js/manual/index.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="asset/internal/js/index.js"></script>
+  
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>

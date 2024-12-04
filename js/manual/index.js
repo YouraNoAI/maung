@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  $(".preloader").fadeOut();
+})
+
 // Cache selectors
 var lastId,
     topMenu = $("#top-menu"),
@@ -45,3 +49,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.addEventListener("scroll", handleScroll);
 });
+
+// Login
